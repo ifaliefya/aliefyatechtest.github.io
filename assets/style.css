@@ -1,4 +1,205 @@
+:root {
+  --indigo : #5468E7;
+  --lilac : #C897E4;
+  --dark : #232340;
+  --white : #FFF;  
+  --pink : #F1B2CC;
+
+  --primary : var(--indigo);
+  --secondary : var(--lilac);
+
+  --body-light-mode : #606060;
+  --body-dark-mode : #8B8B8B;
+  --deactive : #ADADAD;
+
+  --bs-body-font-family : 'SFProDisplay';
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-LightItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-LightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-HeavyItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-HeavyItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-SemiboldItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-Regular.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-Medium.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-ThinItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-UltralightItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-UltralightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-BlackItalic.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../assets/font/SF-Pro-Display/SFProDisplay-Bold.woff2') format('woff2'),
+      url('../assets/font/SF-Pro-Display/SFProDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* general styling */
+body {
+  font-family: 'SFProDisplay';
+  font-weight: 400;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-secondary:hover, .btn-secondary:focus {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
 .btn-round {
   border-radius: 100%;
+}
+
+/* navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-brand img {
+  max-height: 40px;
+}
+
+@media (min-width: 768px) {
   
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--body-dark-mode);
+  }
+  .navbar-expand-md .navbar-nav .nav-link:hover, .navbar-expand-md .navbar-nav .nav-link.active {
+    color: var(--primary);
+  }
+  .navbar-expand-md .navbar-nav .nav-link.disabled {
+    color: var(--deactive)!important;
+  }
+}
+
+/* hero */
+.hero-text h1 {
+  font-size: 55px;
+  font-weight: 700;
+}
+.hero-image {
+  max-width: 100%;
+}
+a.button-scroll {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  color: var(--body-dark-mode);
+  text-decoration: none;
+  position: absolute;
+  bottom: 25px;
+
+}
+.button-scroll i.arrow-down {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: var(--secondary);
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.button-scroll i.arrow-down:before {
+  content: url('../assets/image/icon-arrow-down.svg');
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  left: 0;
+}
+
+a.button-scroll:hover i.arrow-down {
+  top: 8px;
+  transition: ease 0.5s;
+}
+
+/* content */
+.content-section {
+  padding: 80px 0;
+}
+
+.dark-bg-content {
+  background: var(--dark);
+  color: var(--white);
 }

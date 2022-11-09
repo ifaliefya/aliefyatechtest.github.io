@@ -10,19 +10,19 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="assets/style.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-md" >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">folio.</a>
+      <div class="container py-4">
+        <a class="navbar-brand" href="#"><img src="assets/image/logo-with-text.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
   
         <div class="collapse navbar-collapse" id="navbarsExample05">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-md-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#about">About</a>
             </li>
@@ -30,10 +30,10 @@
               <a class="nav-link" href="#work">Work</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
+              <a class="nav-link disabled" href="#service">Service</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#service">Jobs</a>
+              <a class="nav-link" href="#jobs">Jobs</a>
             </li>
           </ul>
           <div class="nav-contact">
@@ -49,20 +49,21 @@
     </nav>
 
     <!-- hero section -->
-    <div id="hero">
+    <div id="hero" class="pt-md-5">
       <div class="container">
-        <div class="row flex-md-row align-items-center g-5 py-5">
+        <div class="row flex-md-row align-items-start g-5 py-5 mt-0">
           <div class="col-md-4">
             <div class="hero-text">
-              <h1>Stand Out from The Crowd.</h1>
-              <p>Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
-              <button type="button" class="btn btn-primary btn-md px-4 py-2 me-md-2">Recent Work</button>
+              <h1 class="mb-md-4">Stand Out from The Crowd.</h1>
+              <p class="mb-md-4">Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
+              <button type="button" class="btn btn-primary btn-md">Recent Work</button>
 
-              <button class="btn btn-down btn-round"><i class="arrow-down"></i>Scroll down</button>
+              <!-- <button class="btn btn-down btn-round"><i class="arrow-down"></i>Scroll down</button> -->
+              <a href="#about" class="button-scroll"><i class="arrow-down"></i><span> Scroll down</span></a>
             </div>
-            <div class="col-md-6">
-              <img src="" alt="">
-            </div>
+          </div>
+          <div class="col-md-8">
+            <img class="hero-image" src="assets/image/0-hero-image.png" alt="hero image desktop">
           </div>
         </div>
       </div>
@@ -71,37 +72,45 @@
     <div id="content">
 
       <!-- we make design section -->
-      <section id="block-wemake" class="content-section dark-bg-content">
-        <div class="section-title">
-          <h6><span>01</span> Who We Are</h6>
-          <h2>We Make Designs that Lead and Inspire.</h2>
+      <section id="about" class="content-section dark-bg-content">
+        <div class="container">
+          <div class="section-title">
+            <h6><span>01</span> Who We Are</h6>
+            <h2>We Make Designs that Lead and Inspire.</h2>
+          </div>
         </div>
       </section>
 
       <!-- recent works section -->
-      <section id="block-recent" class="content-section">
-        <div class="section-title">
-          <h6><span>02</span> You may also like</h6>
-          <h2>Recent Works</h2>
-          <p>Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
+      <section id="work" class="content-section">
+        <div class="container">
+          <div class="section-title">
+            <h6><span>02</span> You may also like</h6>
+            <h2>Recent Works</h2>
+            <p>Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
+          </div>
         </div>
       </section>
 
       <!-- by the numbers section -->
-      <section id="block-bynumbers" class="content-section dark-bg-content">
-        <div class="section-title">
-          <h6><span>03</span> Folio Agency</h6>
-          <h2>By the Numbers.</h2>
+      <section id="service" class="content-section dark-bg-content">
+        <div class="container">
+          <div class="section-title">
+            <h6><span>03</span> Folio Agency</h6>
+            <h2>By the Numbers.</h2>
+          </div>
         </div>
       </section>
 
       <!-- jobs section -->
-      <section id="block-jobs" class="content-section">
-        <div class="section-title">
-          <h6><span>04</span> We are hiring</h6>
-          <h2>Jobs</h2>
-          <p>Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
-          <button class="btn btn-right btn-round"><i class="arrow-right"></i>Available Jobs</button>
+      <section id="jobs" class="content-section">
+        <div class="container">
+          <div class="section-title">
+            <h6><span>04</span> We are hiring</h6>
+            <h2>Jobs</h2>
+            <p>Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
+            <button class="btn btn-right btn-round"><i class="arrow-right"></i>Available Jobs</button>
+          </div>
         </div>
       </section>
     </div>
