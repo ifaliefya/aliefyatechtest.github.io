@@ -19,6 +19,22 @@ function openTabs(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+function loadTabs() {
+  var i, tabContent, tabName;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabContent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  //get id from selected option
+  tabName = document.getElementById("selectTabs").value;
+  
+  // Show the current tab
+  document.getElementById(tabName).style.display = "block";
+}
+
 function openNav() {
   var navbarEl = document.getElementById("topbar");
   navbarEl.classList.toggle("topbar-expand");

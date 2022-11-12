@@ -105,12 +105,12 @@
                     <a href="#" class="btn-arrow arrow-right prev"></a>
                     <a href="#" class="btn-arrow arrow-right next"></a>
                   </div>
-                  <select class="form-select form-select-md mb-3" >
-                    <option class="option-links active" selected onclick="selectTabs(event, '2018')">2018</option>
-                    <option class="option-links" value="1"  onclick="selectTabs(event, '2019')">2019</option>
-                    <option class="option-links" value="2" onclick="selectTabs(event, '2020')">2020</option>
-                    <option class="option-links" value="3" onclick="selectTabs(event, '2021')">2021</option>
-                    <option class="option-links" value="4" onclick="selectTabs(event, '2022')">2022</option>
+                  <select class="form-select form-select-md mb-3"  name="selectTabs" onchange="loadTabs()" id="selectTabs" >
+                    <option class="option-links active" value="2018" selected>2018</option>
+                    <option class="option-links" value="2019">2019</option>
+                    <option class="option-links" value="2020">2020</option>
+                    <option class="option-links" value="2021">2021</option>
+                    <option class="option-links" value="2022">2022</option>
                   </select>
                 </div>
               </div>
