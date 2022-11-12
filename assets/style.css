@@ -183,6 +183,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
+  z-index: 10;
 }
 .navbar-brand img {
   max-height: 40px;
@@ -277,13 +278,62 @@ a.button-fixed:hover i.arrow-down {
 }
 
 /* content */
+#content {
+  overflow-x: hidden;
+}
 .content-section {
   padding: 80px 0;
+  position: relative;
 }
 .dark-bg-content {
   background: var(--dark);
   color: var(--white);
 }
+@media (min-width: 768px) {
+  #hero {
+    position: relative;
+    overflow-x: hidden;
+  }
+  #hero::after, #jobs::after, .footer-box::after {
+    content: url('../assets/image/spiral-0.svg');
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    z-index: -2;
+  }
+  .footer-box {
+    overflow: hidden;
+  }
+  .footer-box::after {
+    opacity: 0.35;
+  }
+  #about::after, #service::after {
+    content: url('../assets/image/spiral-1.svg');
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #work::before {
+    content: url('../assets/image/spiral-2a.svg');
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    z-index: -2;
+  }
+  #work::after {
+    content: url('../assets/image/spiral-2b.svg');
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: -70px;
+    z-index: -2;
+  }
+}
+
 .section-title-logo {
   width: 22px;
   height: 22px;
@@ -382,7 +432,7 @@ a.button-fixed:hover i.arrow-down {
 .about-tabs-button li {
   list-style: "-";
 }
-.about-tabs a {
+.about-tabs a.tablinks {
   display: block;
   padding: 25px 15px;
   text-align: center;
@@ -395,7 +445,7 @@ a.button-fixed:hover i.arrow-down {
   position: relative;
 }
 
-.about-tabs a:after {
+.about-tabs a.tablinks:after {
   content: url('../assets/image/point-line.png');
   position: absolute;
   top: 52%;
@@ -405,7 +455,7 @@ a.button-fixed:hover i.arrow-down {
   visibility: hidden;
 }
 
-.about-tabs a:hover::after, .about-tabs a.active::after  {
+.about-tabs a.tablinks:hover::after, .about-tabs a.tablinks.active::after  {
   visibility: visible;
   transition: ease 0.3s;
 }
@@ -435,6 +485,42 @@ a.button-fixed:hover i.arrow-down {
   transform: translate(-50%, -50%);
 }
 
+.about-tabs-control {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 0 2rem;
+}
+.about-tabs-control .btn-arrow {
+  border: 1px solid transparent;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  display: inline-flex;
+  margin-right: 10px;
+}
+.about-tabs-control .btn-arrow::before {
+  content: url('../assets/image/icon-arrow-right-white.svg');
+  transform: translate(-50%, -50%) scale(0.7);
+}
+.about-tabs-control .btn-arrow.prev::before {
+  transform: translate(-50%, -50%) scale(0.7) rotateY(180deg);
+}
+.about-tabs-control select.form-select {
+  width: 110px;
+  background-color: transparent;
+  background-image: url('../assets/image/chevron-down.svg');
+  border-color: transparent;
+  color: var(--white);
+  height: 50px;
+}
+.about-tabs-control select.form-select:focus {
+  box-shadow: none;
+}
+.about-tabs-control select.form-select option {
+  color: var(--dark);
+}
+
 /* recent works section */
 .featured-product {
   position: relative;
@@ -453,6 +539,7 @@ a.button-fixed:hover i.arrow-down {
 
 .featured-product .card {
   border: 0;
+  background-color: transparent;
 }
 
 .featured-product .card-image {
@@ -678,6 +765,12 @@ img.image-buble {
 }
 .footer-box-content .btn-arrow:before {
   filter: invert(1);
+}
+
+.footer-box-content.d-grid .btn-primary {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--primary);
 }
 
 /* footer bottom */

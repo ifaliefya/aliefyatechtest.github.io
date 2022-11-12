@@ -32,7 +32,7 @@
     content: '';
     display: inline-block;
     width: 30px;
-    height: 2px;
+    height: 2.2px;
     background: var(--dark);
     top: -10px;
     left: 0px;
@@ -142,6 +142,7 @@
     width: 250px;
     height: 250px;
     margin: auto;
+    margin-top: 30px;
   }
   .number-circle h2{
     font-size: 110px;
@@ -186,6 +187,7 @@
   div#carouselService {
     width: 100%;
     padding-top: 50px;
+    overflow-x: hidden;
   }
   #carouselService .carousel-inner {
     margin-left: -40px;
@@ -213,6 +215,7 @@
   section#jobs {
     padding-top: 160px;
     background: linear-gradient(360deg, rgba(255, 255, 255, 0.0001) 0%, rgba(237, 229, 240, 0.504289) 100%);
+    z-index: -1;
   }
   
   a.button-scroll.button-jobs {
@@ -227,6 +230,9 @@
   }
 
 /* footer */
+  .footer-box .row {
+    margin: 0;
+  }
   .footer-box-content {
     padding: 3rem 2rem;
     text-align: center;

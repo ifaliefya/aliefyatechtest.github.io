@@ -1,4 +1,4 @@
-function openTabs(evt, cityName) {
+function openTabs(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -15,11 +15,9 @@ function openTabs(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-const carousel = new bootstrap.Carousel('#carouselService');
 
 function openNav() {
   var navbarEl = document.getElementById("topbar");

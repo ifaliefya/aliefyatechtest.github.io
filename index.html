@@ -100,6 +100,19 @@
                   <li><a class="tablinks" onclick="openTabs(event, '2021')">2021</a></li>
                   <li><a class="tablinks" onclick="openTabs(event, '2022')">2022</a></li>
                 </ul>
+                <div class="about-tabs-control d-md-none">
+                  <div class="about-tabs-arrow">
+                    <a href="#" class="btn-arrow arrow-right prev"></a>
+                    <a href="#" class="btn-arrow arrow-right next"></a>
+                  </div>
+                  <select class="form-select form-select-md mb-3" >
+                    <option class="option-links active" selected onclick="selectTabs(event, '2018')">2018</option>
+                    <option class="option-links" value="1"  onclick="selectTabs(event, '2019')">2019</option>
+                    <option class="option-links" value="2" onclick="selectTabs(event, '2020')">2020</option>
+                    <option class="option-links" value="3" onclick="selectTabs(event, '2021')">2021</option>
+                    <option class="option-links" value="4" onclick="selectTabs(event, '2022')">2022</option>
+                  </select>
+                </div>
               </div>
               <div class="col-md-9">
                 <img class="tabs-bg" src="assets/image/tabs-bg.png" alt="">
@@ -186,6 +199,9 @@
                         <a href="#" class="btn-arrow arrow-right"></a>
                       </div>
                     </div>
+                  </div>
+                  <div class="col-12 d-md-none d-grid">
+                    <button type="button" class="btn btn-primary btn-md btn-block">Contact Us</button>
                   </div>
                 </div>
               </div>
@@ -353,7 +369,7 @@
           <div class="row">
             <div class="col-md-12 text-center border-bottom">
               <div class="footer-box-content text-center">
-                <img class="footer-logo-icon" src="assets/image/logo-symbol.png" alt="">
+                <img class="footer-logo-icon" src="assets/image/logo-symbol-secondary.png" alt="">
                 <div class="section-title mx-auto mb-0">
                   <h6>Say Hello</h6>
                   <h5 class="section-subtitle">A design team building a curated marketplace for UI designers.</h5>
@@ -376,6 +392,11 @@
                 </div>
               </div>
             </div>
+            <div class="col-12 d-md-none ">
+              <div class="footer-box-content d-grid pt-0">
+                <button type="button" class="btn btn-primary btn-md btn-block">Contact Us</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -384,12 +405,20 @@
             <img src="assets/image/logo-with-text.png" alt="" class="footer-bottom-logo mx-auto mb-4">
             <p class="color-deactive">Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
           </div>
-          <ul class="nav justify-content-center py-4">
+          <ul class="nav justify-content-center py-4 d-sm-flex d-none">
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
             <li class="nav-item"><a href="#service" class="nav-link">Service</a></li>
             <li class="nav-item"><a href="#jobs" class="nav-link">Jobs</a></li>
           </ul>
+          <div class="d-grid d-sm-none p-4">
+            <select class="form-select form-select-md" >
+              <option class="active" selected>About</option>
+              <option class="" value="1" >Work</option>
+              <option class="" value="2">Service</option>
+              <option class="" value="3">Jobs</option>
+            </select>
+          </div>
           <div class="row footer-bottom-credit d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
             <div class="col-md-4 d-flex align-items-center">
               <span class="mb-3 mb-md-0 text-muted">© 2020, UI8 LLC.</span>
